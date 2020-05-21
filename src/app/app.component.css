@@ -1,0 +1,13 @@
+#rootDiv {
+   text-align: center;
+
+}
+
+img {
+  margin: 20px;
+  border-radius: 50%;
+}
+
+.input-class {
+  margin: 50px;
+}
