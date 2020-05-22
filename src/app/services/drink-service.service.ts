@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Drink } from '../Drink';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DrinkServiceService {
-  _drinks: Promise<any>;
+  _drinks: Promise<Drink>;
   drinkName: string;
   constructor() {
 
@@ -19,7 +20,7 @@ export class DrinkServiceService {
                 const obj = JSON.parse(request.response);
                  resolve(obj);
               } else {
-               reject("error in retrieving data from the server:"+request.statusText);
+                 reject("error in retrieving data from the server:"+request.statusText);
               }
            }
            request.onerror = function() {

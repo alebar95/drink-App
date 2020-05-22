@@ -1,5 +1,6 @@
 import { DrinkServiceService } from './services/drink-service.service';
 import { Component } from '@angular/core';
+import {Drink} from './Drink';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'drinkapp';
-  drinks: Array<any>;
+  drinks: Array<Drink>;
   drinkName: string;
   constructor(private service: DrinkServiceService) {
   }

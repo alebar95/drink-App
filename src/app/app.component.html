@@ -7,13 +7,11 @@
          (onsearch) ="onClickSearch()">
         <button (click)="onClickSearch()"> search </button>
       </form>
-      <div  *ngFor="let drink of drinks">
+      <div *ngFor="let drink of drinks">
         <h2> {{drink.strDrink}} </h2>
         <img  src= "{{drink.strDrinkThumb}}">
-        <p> {{drink.strInstructions}}</p>
+        <p [title] = "drink.strInstructions" > {{drink.strInstructions}}</p>
       </div>
-
-
 </div>
 
 
